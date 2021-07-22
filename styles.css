@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding:0;
+}
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+body {
+    overflow: hidden;
+    background-color: aliceblue;
+}
+#button {
+    text-align: center;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    cursor: pointer;
+    font-size:24px;
+    margin: 0 0 0 100px;
+    position:absolute;
+    right:0%;
+    background-color: #d35400;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+#button:hover {
+    background:#fff;
+    box-shadow:0px 2px 10px 5px #97B1BF;
+    color:#000;
+}
+
+.footer {
+    position:absolute;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    font-size: large;
+    display: block;
+    color: white;
+    bottom:0%;
+    left:41%;
+    background-color: #111;
+}
+.gameContainer {
+    position: relative;
+}
+#scoreCont {
+    position: absolute;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+    top:0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: grey;
+    border: 2px solid #ccc;
+}
+
+:root {
+    --animation: glitch; /* glitch, hue, fade, shrink */
+    --speed: 2s;
+    --easing: linear;
+  }
+  
+  
+  
+  .gameOver {
+    position: absolute;
+    top:38%;
+    left:23%;
+    visibility: hidden;
+    background-color: #111;
+    border-radius: 20px;
+    padding: 1em;
+    font-family: "Press Start 2P", Arial, sans-serif;
+    text-align: center;
+    color: #2f99ff;
+    text-shadow: 0px 2px #255fcc;
+    animation: var(--animation) var(--speed) infinite var(--easing);
+  }
+  
+  h1 { font-size: 7em }
+  
+  @keyframes glitch {
+    0%, 12%, 15%, 52%, 55%, 82%, 85%, 100% { opacity: 1; transform: scaleX(1) scaleY(1) }  
+    13% { opacity: .8; transform: scaleY(2); color: #0ff }
+    53% { opacity: .8; transform: scaleX(.7);  color: #f0f }
+    83% { opacity: .8; transform: rotate(-10deg); color: #ff0 }
+  }
+  
+  @keyframes hue {  
+    13% { color: #0ff }
+    53% { color: #f0f }
+    83% { color: #ff0 }
+  }
+  
+  @keyframes shrink {  
+     0% { transform: scaleY(1) }
+    50% { transform: scaleY(.5) }
+   100% { transform: scaleY(1) }
+  }
+  
+  @keyframes fade {  
+     0% { opacity: 1 }
+    50% { opacity: 0 }
+   100% { opacity: 1 }
+  }
